@@ -110,22 +110,23 @@ foreach ($footerItems as $key => $value) {
 }
 //exaple how to set image sizewise
 // ['dektop', 'ipad', 'mobile']
-			$img1x = [
-			get_exist_image_url("in-content-cta", "in-content-bg"),
-			get_exist_image_url("in-content-cta", "in-content-bg"),
-			get_exist_image_url("in-content-cta", "m-in-content-bg"),
-		];
-		$img2x = [
-			get_exist_image_url("in-content-cta", "in-content-bg@2x"),
-			get_exist_image_url("in-content-cta", "in-content-bg@2x"),
-			get_exist_image_url("in-content-cta", "m-in-content-bg@2x"),
-		];
+$img1x = [
+	get_exist_image_url("in-content-cta", "in-content-bg"),
+	get_exist_image_url("in-content-cta", "in-content-bg@2x"),
+	get_exist_image_url("in-content-cta", "in-content-bg@3x"),
+];
 
-		$img3x = [
-			get_exist_image_url("in-content-cta", "in-content-bg@3x"),
-			get_exist_image_url("in-content-cta", "in-content-bg@3x"),
-			get_exist_image_url("in-content-cta", "m-in-content-bg@3x"),
-		];
+$img2x = [
+	get_exist_image_url("in-content-cta", "in-content-bg"),
+	get_exist_image_url("in-content-cta", "in-content-bg@2x"),
+	get_exist_image_url("in-content-cta", "in-content-bg@3x"),
+];
+
+$img3x = [
+	get_exist_image_url("in-content-cta", "in-content-bg"),
+	get_exist_image_url("in-content-cta", "in-content-bg@2x"),
+	get_exist_image_url("in-content-cta", "in-content-bg@3x"),
+];
 $img1x = Implode(",", $img1x);
 $img2x = Implode(",", $img2x);
 $img3x = Implode(",", $img3x);

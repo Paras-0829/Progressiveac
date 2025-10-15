@@ -24,7 +24,7 @@ if (
 <div class="nav_container_desktop nav_container_desktop_a d-none hide-on-touch <?php echo esc_attr($nav_class); ?>">
     <div class="">
         <div class="">
-            <div class="pl-0 text-right pt-2">
+            <div class="pl-0 text-right pt-1">
                 <nav class="navbar navbar-expand-lg navbar-dark m-auto px-0 pb-0 pt-2 w-100">
                     <div id="navbarSupportedContentDesktop" class="navbar-collapse collapse" style="">
                         <?php

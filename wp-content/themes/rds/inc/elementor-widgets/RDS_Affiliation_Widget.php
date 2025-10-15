@@ -65,6 +65,70 @@ public $widgetPathFull;
 
 <script type="text/javascript">
 
+       jQuery(document).ready(function () {
+        var variation = "<?php echo $args['globals']['affiliation']['variation'] ?>";
+          var count = "<?php echo $args['globals']['affiliation']['count'] ?>";
+        var slidesPerView = {a: 4, b: 5, c: 6};
+        if(count <= slidesPerView[variation]){
+             var affiliactionSlider = new Swiper(".affiliation-swiper-a", {
+            spaceBetween: 30,
+            slidesPerView: 1,
+            loop: true,
+           navigation: {
+                nextEl: ".affiliation_next_a",
+                prevEl: ".affiliation_prev_a",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                992: {
+                    slidesPerView: count,
+                    spaceBetween: 30,
+                    noSwiping: true,
+              
+                },
+            },
+        });
+
+        }else{
+           var affiliactionSlider = new Swiper(".affiliation-swiper-a", {
+            spaceBetween: 30,
+            slidesPerView: 1,
+            loop: true,
+             autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                 nextEl: ".affiliation_next_a",
+                prevEl: ".affiliation_prev_a",
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                },
+                992: {
+                    slidesPerView: slidesPerView[variation],
+                    spaceBetween: 30,
+                    noSwiping: false,
+                },
+            },
+        });
+
+        }
+        
+    });
 </script>
 
 <?php

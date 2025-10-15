@@ -170,11 +170,7 @@ public $widgetPathFull;
             'type' => \Elementor\Controls_Manager::TEXTAREA,
             'default' => '24/7 Emergency Service',
         ]);
-$this->add_control('content', [
-            'label' => 'Content',
-            'type' => \Elementor\Controls_Manager::TEXTAREA,
-            'default' => '',
-        ]);
+
         $this->add_control('button_text', [
             'label' => 'Button Text',
             'type' => \Elementor\Controls_Manager::TEXT,
@@ -262,8 +258,6 @@ $this->add_control('content', [
         $args['globals']['in_content_cta']['button_class'] = sanitize_text_field($settings['button_class']);
         $args['globals']['in_content_cta']['telephone_class'] = sanitize_text_field($settings['telephone_class']);
         $args['globals']['in_content_cta']['heading'] = $settings['heading'];
-		        $args['globals']['in_content_cta']['content'] = $settings['content'];
-
         $args['globals']['in_content_cta']['target'] = sanitize_text_field($settings['target']) ? true : false;
         $args['globals']['in_content_cta']['phone'] = sanitize_text_field($settings['phone']);
         $args['globals']['in_content_cta']['button_link'] = sanitize_text_field($settings['button_link']);
